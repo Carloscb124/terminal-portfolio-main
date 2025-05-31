@@ -1,0 +1,4 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; frame-src 'self' https://open.spotify.com; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; connect-src 'self';"

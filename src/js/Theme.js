@@ -1,11 +1,11 @@
 import { UniversalFunction } from "./UniversalFunction.js";
+
 export class Theme {
     constructor(options) {
-        // options is an array of flags and values passed to the theme command 
-        // like --name dark-forest OR --name dark-forest --list OR --help
         this.options = options;
         this.listOfThemes = ["dark-forest", "dark-ocean", "dark-space", "dark-night",
             "dark-cave", "dark-sea", "light-vanilla", "light-haze", "light-day", "light-sky"];
+        this.loadSavedTheme(); // Carrega o tema salvo ao iniciar
         this.parseCommand();
     }
 
@@ -40,8 +40,16 @@ export class Theme {
     setTheme(theme) {
         let output = document.createElement("div");
         let commandElements = document.getElementsByClassName("command");
+        
         if (this.listOfThemes.includes(theme)) {
-            document.querySelector("body").className = theme;
+            // Remove todas as classes de tema primeiro
+            document.body.classList.remove(...this.listOfThemes);
+            // Adiciona o novo tema
+            document.body.classList.add(theme);
+            
+            // Salva no localStorage
+            localStorage.setItem("selectedTheme", theme);
+            
             output.classList.add("output");
             output.innerHTML = `theme: theme set to ${theme}`;
         } else {
@@ -50,6 +58,13 @@ export class Theme {
             type 'theme --list' to see the list of themes.`;
         }
         commandElements[commandElements.length - 1].appendChild(output);
+    }
+
+    loadSavedTheme() {
+        const savedTheme = localStorage.getItem("selectedTheme");
+        if (savedTheme && this.listOfThemes.includes(savedTheme)) {
+            document.body.classList.add(savedTheme);
+        }
     }
 
     list(value) {
@@ -66,6 +81,4 @@ export class Theme {
         --help shows this help message.`;
         new UniversalFunction().updateElement("div", "output", outMsg);
     }
-
 }
-

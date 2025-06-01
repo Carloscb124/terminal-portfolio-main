@@ -1,0 +1,13 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' 'unsafe-inline';
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data: https://*.scdn.co;
+      font-src 'self';
+      frame-src https://open.spotify.com;
+      child-src https://open.spotify.com;
+      media-src https://*.spotify.com;
+    """

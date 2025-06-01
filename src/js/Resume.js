@@ -189,7 +189,7 @@ export class Resume {
     displayResume() {
         new UniversalFunction().updateElement("div", "output resume", this.toString());
         new UniversalFunction().updateElement("div", "output", 
-            `<p>Use <em>resume --download [tipo-de-arquivo pdf ou docx]</em> para baixar o currículo acima no formato especificado.</p>`
+            `<p>Use <em>resume --download [tipo-de-arquivo pdf ou doc]</em> para baixar o currículo acima no formato especificado.</p>`
         );
     }
 }

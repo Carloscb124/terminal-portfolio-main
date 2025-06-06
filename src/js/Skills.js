@@ -4,19 +4,19 @@ export class Skills {
     constructor() {
         this.skillsData = {
             "FRONT-END": [
-                { name: "JavaScript", level: 90 },
-                { name: "HTML5", level: 95 },
-                { name: "CSS3", level: 85 },
-                { name: "Flutter", level: 70 }
+                { name: "JavaScript", level: 30 },
+                { name: "HTML5", level: 70 },
+                { name: "CSS3", level: 50 },
+                { name: "Flutter", level: 30 }
             ],
             "BACK-END/DADOS": [
-                { name: "SQL Server", level: 80 },
+                { name: "SQL Server", level: 40 },
                 { name: "WordPress", level: 88 }
             ],
             "TI/INFRAESTRUTURA": [
                 { name: "Redes", level: 92 },
-                { name: "Servidores", level: 87 },
-                { name: "Segurança", level: 85 },
+                { name: "Servidores", level: 57 },
+                { name: "Segurança", level: 65 },
                 { name: "Hardware", level: 90 }
             ],
             "HABILIDADES PROFISSIONAIS": [

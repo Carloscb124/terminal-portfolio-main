@@ -1,40 +1,13 @@
 import { UniversalFunction } from "./UniversalFunction.js";
 
 const commands = [
-    { 
-        "name": "help", 
-        "description": "Lista de comandos disponíveis no terminal.",
-        "usage": "help [comando]"
-    },
-    { 
-        "name": "about", 
-        "description": "Mostra informações sobre mim e este projeto.",
-        "usage": "about"
-    },
-    { 
-        "name": "whoami", 
-        "description": "Uma reflexão filosófica sobre identidade digital.",
-        "usage": "whoami"
-    },
-    { 
-        "name": "clear", 
-        "description": "Limpa todo o conteúdo do terminal.",
-        "usage": "clear"
-    },
-    { 
-        "name": "history", 
-        "description": "Mostra o histórico de comandos executados.",
-        "usage": "history"
-    },
-    { 
-        "name": "exit", 
-        "description": "Tenta fechar o terminal (funcionalidade limitada por segurança).",
-        "usage": "exit"
-    },
-    { 
-        "name": "theme", 
-        "description": "Altera o tema visual do terminal.",
-        "usage": "theme [opções]",
+    { "name": "help", "description": "Lista de comandos." },
+    { "name": "about", "description": "Sobre mim." },
+    { "name": "whoami", "description": "Estou descobrindo quem eu sou. Haha" },
+    { "name": "clear", "description": "Limpa o terminal. " },
+    {"name": "history", "description": "Histórico de comandos. "},
+    {"name": "exit", "description": "Sai do terminal."},
+    { "name": "theme", "description": "Muda o tema do terminal.", 
         "options": [
             { 
                 "option": "--name [nome-do-tema]", 

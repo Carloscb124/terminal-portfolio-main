@@ -3,7 +3,6 @@ import { UniversalFunction } from "./UniversalFunction.js";
 const commands = [
     { "name": "help", "description": "Lista de comandos." },
     { "name": "about", "description": "Sobre mim." },
-    { "name": "whoami", "description": "Estou descobrindo quem eu sou. Haha" },
     { "name": "clear", "description": "Limpa o terminal. " },
     {"name": "history", "description": "Histórico de comandos. "},
     {"name": "exit", "description": "Sai do terminal."},

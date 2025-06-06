@@ -6,6 +6,7 @@ import { Resume } from "./Resume.js";
 import { Connect } from "./Connect.js";
 import { Contact } from "./Contact.js";
 import { UniversalFunction } from "./UniversalFunction.js";
+import { Skills } from "./Skills.js"; 
 
 export class Controller {
     constructor(InputedCommand) {
@@ -41,14 +42,15 @@ export class Controller {
             case "contact":
                 new Contact().updateDOM();
                 break;
+            case "skills": // Novo caso para o comando skills
+                new Skills().updateDOM();
+                break;
             case "clear":
                 document.querySelector("#terminal").innerHTML = "";
                 break;
             case "exit":
                 new UniversalFunction().updateElement("div", "error",
                     "Due to security reasons, you can't close this window using the 'exit' command.");
-                // window.open(location, '_self').close();
-                // window.close();
                 break;
             default:
                 let errMsg = `${cmd}: The term '${cmd}' is not recognized as a name of a command.<br>type 'help' to see the list of available commands.`;

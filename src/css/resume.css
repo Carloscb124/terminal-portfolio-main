@@ -1,41 +1,53 @@
-.resume{
+.resume {
     display: flex;
     flex-direction: column;
     border: 2px solid var(--color-text);
     border-radius: .6rem;
-    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-    font-family:monospace;
+    font-family: monospace;
     margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--color-terminal-bg);
+    color: var(--color-terminal-text);
 }
-.resume > *:not(:last-child){
+
+.resume > *:not(:last-child) {
     padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--color-text);
 }
-hr{
+
+hr {
     width: 100%;
     border: .1vw solid var(--color-text);
     border-radius: 1rem;
+    margin: 0.5rem 0;
 }
-a{
+
+a {
     color: var(--color-text);
     text-decoration: underline;
-    font-weight: 900;       
-    padding: 0 .4rem 0 .4rem;
+    font-weight: 900;
+    padding: 0 .4rem;
 }
-a:hover, a:focus{
-    /* background-color: var(--color-text); */
+
+a:hover, a:focus {
     background-color: var(--color-terminal-text);
-    color: var(--color-background);         
+    color: var(--color-terminal-bg);
 }
-strong{
+
+strong {
     font-weight: 900;
 }
-.header{
+
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: .5rem;
+    text-align: center;
 }
-.header p{
+
+.header p {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -44,27 +56,111 @@ strong{
     white-space: pre;
 }
 
+/* Seções principais */
 .education > *, 
 .professional-experience > *,
 .projects > *,
 .skills > *,
-.achievements-and-certifications > *{
+.achievements-and-certifications > * {
     padding-bottom: .5rem;
 }
 
+/* Layout para itens de educação e experiência */
 .education-item, 
 .professional-experience-item {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
+
 .education-item > *:nth-child(2n+2), 
-.professional-experience-item > *:nth-child(2n+2){
+.professional-experience-item > *:nth-child(2n+2) {
     text-align: right;
 }
+
+/* Listas */
 .professional-experience-item > ul,
 .projects-item > ul,
 .skills > ul,
-.achievements-and-certifications > ul{
+.achievements-and-certifications > ul {
     padding-left: 2rem;
     padding-top: .25rem;
+    list-style-type: square;
+}
+
+/* Estilos específicos para skills */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill-category {
+    background-color: var(--color-terminal-bg);
+    border: 1px solid var(--color-text);
+    border-radius: .4rem;
+    padding: 1rem;
+}
+
+.skill-category h3 {
+    color: var(--color-accent);
+    margin-bottom: 0.8rem;
+    border-bottom: 1px dashed var(--color-text);
+    padding-bottom: 0.5rem;
+}
+
+.skill-item {
+    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-bar-container {
+    height: 12px;
+    background-color: var(--color-terminal-bg);
+    border: 1px solid var(--color-text);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.skill-bar {
+    height: 100%;
+    background-color: var(--color-accent);
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .education-item, 
+    .professional-experience-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .education-item > *:nth-child(2n+2), 
+    .professional-experience-item > *:nth-child(2n+2) {
+        text-align: left;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animações */
+@keyframes skillBarAnimation {
+    from { width: 0; }
+    to { width: attr(data-level); }
+}
+
+.skill-bar {
+    animation: skillBarAnimation 1.5s ease-out forwards;
 }

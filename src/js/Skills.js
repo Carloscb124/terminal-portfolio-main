@@ -11,6 +11,7 @@ export class Skills {
             ],
             "BACK-END/DADOS": [
                 { name: "SQL Server", level: 40, icon: "" },
+                { name: "Java", level: 30, icon: "" },
                 { name: "WordPress", level: 88, icon: "" }
             ],
             "TI/INFRAESTRUTURA": [

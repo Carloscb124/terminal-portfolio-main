@@ -77,7 +77,7 @@ export class Resume {
         return `<div class="summary">
             <h2>RESUMO</h2><hr>
             <p>Sou Carlos, estudante de Técnico de Informática pelo SENAC, com experiência prévia no setor de TI, tanto na área de manutenção quanto em desenvolvimento web. Entusiasta de novas tecnologias, busco estar sempre atualizado com as tendências do mercado.</p>
-            <p>Tenho foco em desenvolvimento com JavaScript, HTML, CSS, WordPress, Elementor e Flutter. Me considero ágil e consistente ao aprender novas linguagens e me adaptar a diferentes cenários. Estou sempre pronto para enfrentar novos desafios com uma postura otimista, perseverante e dedicada.</p>
+            <p>Tenho foco em desenvolvimento com JavaScript, HTML, CSS, WordPress, Elementor e Java. Me considero ágil e consistente ao aprender novas linguagens e me adaptar a diferentes cenários. Estou sempre pronto para enfrentar novos desafios com uma postura otimista, perseverante e dedicada.</p>
         </div>`;
     }
 
@@ -131,7 +131,7 @@ export class Resume {
                 <h2>HABILIDADES TÉCNICAS</h2><hr>
             </div>
             <ul>
-                <li><strong>Linguagens:</strong> JavaScript, HTML, CSS</li>
+                <li><strong>Linguagens:</strong> JavaScript, HTML, CSS, Java</li>
                 <li><strong>Plataformas:</strong> WordPress, Elementor</li>
                 <li><strong>Frameworks:</strong> Flutter</li>
                 <li><strong>Banco de Dados:</strong> Microsoft SQL Server</li>
